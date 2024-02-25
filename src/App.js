@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Header/Navbar';
+import TaxCalculator from './Components/TaxCalculator/TaxCalculator';
+import GetStarted from './Components/TaxCalculator/GetStarted';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <div className='bg-[#EFF2F5] p-4 flex px-8 gap-6 max-md:flex-col max-md:p-0'>
+        <TaxCalculator/>
+        <GetStarted></GetStarted>
+
+      </div>
+      <Footer/>
+    </>
   );
 }
 
